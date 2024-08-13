@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+
+:root{
+    --main-color:#ceb5c3;
+    --secondary-color:white;
+    --third-color:violet;
+    --hover-color1:#E7BCDE;
+    --hover-color2:#FAEED1;
+}
+
+*::selection{
+    padding: 50px 10%;
+    color: var(--secondary-color);
+    background-color:var(--third-color);
+}
+
+section{
+    padding: 50px 10px;
+}
+
+img {
+    width:100%;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:var(--secondary-color);
+    padding:15px 10%;
+    transition: 0.2s;
+    box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+}
+
+
+.navbar a{
+    padding: 11px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.navbar a:hover{
+    color: var(--third-color);
+}
+
+#menu{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+#menu:hover{
+    color: var(--third-color);
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:var(--main-color);
+    gap: 1rem;
+    padding: 0 10%;
+}
+.homeTxt{
+    color: var(--secondary-color);
+    flex: 1 20rem;
+    
+}
+
+.home-img{
+    margin-top: 5rem;
+    flex: 0 1 20rem;
+    user-select: none;
+    cursor: pointer;
+}
+.firstImg{
+    width: 250px;
+}
+
+.secondImg{
+    display: none;
+}
+.imgContainer:hover .firstImg{
+    display: none;
+}
+.imgContainer:hover .secondImg{
+    display: block;
+}
+
+.secondImg{
+    animation: animate 3s linear infinite; 
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-15px,0px);
+    }
+    50% {
+        transform: translate(-0px,-15px);
+    }
+    100% {
+        transform: translate(-15px,0);
+    }
+
+}
+
+.homeTxt span{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.homeTxt h1{
+    font-weight: bolder;
+    font-size: 3.2rem;
+    color: black;
+}
+
+.homeTxt h2{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0.5rem 0 1.4rem;
+    text-transform: uppercase;
+}
+.home-ipown15{
+    text-align: center;
+    margin:1rem 0 1rem;
+    background-color: #878787;
+    padding: 10px;
+    border-radius: 50%;
+}
+.home .home-buyNow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.home .home-buyNow .bx, .box .box-txt .bx{
+    color: black;
+    border: 2px solid black;
+    padding: 7px 16px;
+    border:2px solid;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.btn, .btn2,.box .box-txt .bx, .home .home-buyNow .bx{
+    padding: 7px 16px;
+    border:1px solid;
+    border-radius: 40px;
+    color: black;
+    text-decoration: none;
+    font-weight: 50px;
+    transition: 0.3s;
+}
+
+.btn:hover, .btn2:hover,.box .box-txt .bx:hover, .home .home-buyNow .bx:hover{
+    background-color:var(--hover-color1);
+    
+}
+
+.heading{
+    text-align: center;
+    margin: 2rem 0 2rem;
+}
+
+.heading span{
+    font-size: 1 rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size: 3 rem;
+    color:var(--third-color);
+   
+}
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 7rem;
+}
+
+.shop .box{
+    flex: 0 1 10rem;
+    background-color: var(--main-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+.shop .box .box-image {
+    margin-top: -100px;
+    width: 150px;
+}
+
+.secondBoxImg{
+    display: none;
+    
+}
+.firstBoxImg{
+    height: 200px;
+}
+.box-image:hover .firstBoxImg{
+    display: none;
+}
+.box-image:hover .secondBoxImg{
+    display: block;
+}
+
+.stars {
+    margin: 1rem 0 0.1rem;
+}
+.shop .box .box-txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop .box .stars .bx {
+    color: green;
+}
+.shop .box h2 {
+    font-size: 1.2rem;
+}
+
+.box .box-buyNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.deliveryContainerImage{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    margin-top: 2rem;
+}
+.deliveryImg{
+    flex: 1 1 21rem;
+    margin-left: 5rem;
+}
+
+.deliveryTxt{
+    flex: 1 1 21rem;
+}
+.deliveryTxt h2{
+    font-size: 1.2rem;
+}
+.deliveryTxt p {
+    margin: 0.5rem 8rem 1rem 0;
+    text-align: justify;
+}
+
+.background {
+    background-image: url(login.jpg);
+    background-size: cover;
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    padding: 80px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+
+}
+.loginTxt {
+    font-size: 3rem;
+    position: relative;
+    bottom: 60px;
+}
+.inputUser, .inputPass {
+    background: transparent;
+    outline: none;
+    border: 1px solid black;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.hidden span, .visible span{
+    margin: 0 20px 0;
+    font-size: 12px;
+}
+.bttn button{
+    padding: 10px 105px;
+    border:1px solid;
+    border-radius: 40px;
+    color: black;
+    text-decoration: none;
+    font-weight: 50px;
+    transition: 0.3s;
+}
+.bttn button:hover{
+    background: var(--hover-color2);
+}
+.registerTxt a{
+    color: var(--secondary-color);
+    font-weight: 400;
+    text-decoration: none;
+}
